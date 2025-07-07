@@ -17,6 +17,11 @@ html {
   min-height: 100%;
 }
 
+.col-5th {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
 body {
   margin-bottom: 60px;
 }
