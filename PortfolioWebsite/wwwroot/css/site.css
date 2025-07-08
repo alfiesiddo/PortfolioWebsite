@@ -50,22 +50,90 @@ html {
     margin: 1% auto;
 }
 
+.cvbutton {
+    padding: 6px 16px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: transparent;
+    color: black !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .cvbutton:hover {
+        background-color: black;
+        color: white !important;
+        text-decoration: none;
+    }
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    font-family: "Arial", sans-serif;
+    font-size: 0.85rem;
+}
+
+    .tech-list li {
+        background: rgba(0,0,0,0.03);
+        padding: 0.2em 0.6em;
+        border-radius: 2em;
+        transition: background 0.2s ease;
+    }
+
+        .tech-list li:hover {
+            background: rgba(0,0,0,0.08);
+        }
+
 
 @media (max-width: 767.98px) {
-    .profile-image {
-        max-height: 300px;
+
+    .cvbutton {
+        border: none;
+        padding: 0;
+        background: none;
+        color: inherit;
     }
-    .same-height-img{
+
+        .cvbutton:hover {
+            background-color: white;
+            color: black !important;
+            text-decoration: none;
+        }
+
+    .profile-image {
+        max-height: 400px;
+    }
+
+    .same-height-img {
         min-height: 80%;
     }
 
-    .IndexText{
+    .IndexText {
         font-size: 10px;
     }
-    .projectText{
+
+    .projectText {
         font-size: 10px;
     }
+
+    .tech-list {
+        gap: 0.3em;
+        font-size: 0.75rem;
+    }
+
+        .tech-list li {
+            padding: 0.15em 0.4em;
+ 
+        }
 }
+
+
 
 
 body {
