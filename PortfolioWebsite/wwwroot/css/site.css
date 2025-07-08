@@ -2,12 +2,6 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -17,14 +11,62 @@ html {
   min-height: 100%;
 }
 
-.col-5th {
-    flex: 0 0 20%;
-    max-width: 20%;
+
+
+.profile-image {
+    align-self: center;
+    max-height: 500px;
 }
 
-.projectText{
+
+.projectText {
     font-size: 18px;
 }
+
+.IndexText {
+    font-size: 18px;
+}
+
+.same-height-img {
+    align-self: center;
+    min-height: 70%;
+    height: 100%;
+    width: fit-content;
+    object-fit: contain;
+}
+
+.same-height-img-containter {
+    padding-bottom: 2%;
+    max-height: 100%;
+}
+
+.panel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    max-width: 100%;
+    margin: 1% auto;
+}
+
+
+@media (max-width: 767.98px) {
+    .profile-image {
+        max-height: 300px;
+    }
+    .same-height-img{
+        min-height: 80%;
+    }
+
+    .IndexText{
+        font-size: 10px;
+    }
+    .projectText{
+        font-size: 10px;
+    }
+}
+
 
 body {
   margin-bottom: 60px;
