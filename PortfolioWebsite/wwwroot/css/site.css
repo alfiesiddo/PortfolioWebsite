@@ -90,6 +90,40 @@ html {
             background: rgba(0,0,0,0.08);
         }
 
+.my-contacts {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+    .my-contacts th,
+    .my-contacts td {
+        padding: 12px 16px;
+        border: none;
+    }
+
+    .my-contacts thead th {
+        border-bottom: 1px solid #dddddd;
+        color: #555555;
+        font-size: 1rem;
+    }
+
+    .my-contacts tbody tr:nth-child(odd) {
+        background-color: #fdfdfd;
+    }
+
+    .my-contacts tbody tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    .my-contacts tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    .my-contacts img {
+        height: 40px;
+    }
 
 @media (max-width: 767.98px) {
 
@@ -132,6 +166,7 @@ html {
  
         }
 }
+
 
 
 

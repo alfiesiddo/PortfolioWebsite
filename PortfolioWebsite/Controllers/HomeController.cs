@@ -26,6 +26,20 @@ namespace PortfolioWebsite.Controllers
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetResume()
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Files", "CV Alfie Siddons.pdf");
+
+            if (System.IO.File.Exists(filePath))
+            {
+                var fileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+                var fileName = Path.GetFileName(filePath);
+                return File(fileBytes, "application/pdf", fileName);
+            }
+
+            return NotFound();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
