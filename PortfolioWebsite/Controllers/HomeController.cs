@@ -29,7 +29,7 @@ namespace PortfolioWebsite.Controllers
         [HttpGet]
         public async Task<IActionResult> GetResume()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Files", "CV Alfie Siddons.pdf");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Files", "CV Alfie Siddons_portfolioVersion.pdf");
 
             if (System.IO.File.Exists(filePath))
             {
