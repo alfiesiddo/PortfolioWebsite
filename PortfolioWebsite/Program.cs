@@ -11,26 +11,26 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.Use(async (context, next) =>
-{
-    var host = context.Request.Host.Host;
-
-    if (host.Equals("example.com", StringComparison.OrdinalIgnoreCase))
-    {
-        var newUrl = $"https://alfiesiddons.azurewebsites.net{context.Request.Path}{context.Request.QueryString}";
-        context.Response.Redirect(newUrl, permanent: true);
-        return;
-    }
-
-    await next();
-});
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.Use(async (context, next) =>
+{
+    var host = context.Request.Host.Host;
+
+    if (host.Equals("azurewebsites.net", StringComparison.OrdinalIgnoreCase))
+    {
+        var newUrl = $"https://asiddons.co.uk{context.Request.Path}{context.Request.QueryString}";
+        context.Response.Redirect(newUrl, permanent: true);
+        return;
+    }
+
+    await next();
+});
 
 app.MapControllerRoute(
     name: "default",
