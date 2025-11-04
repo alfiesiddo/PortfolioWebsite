@@ -20,9 +20,9 @@
             <img src="@Url.Content("~/images/SenditnowTWO.png")" alt="SendItNow credits purchase page" class="img-fluid rounded shadow same-height-img">
         </div>
         <br />
-        <p class="projectText">SendItNow is a project I recently undertook with a friend. It is a prank website where users can pay to send anonymous novelty prank messages to their friends. You can visit <a href="https://sendit-now.co.uk/">SendItNow</a> here. I have developed the backend and my friend developed the frontend. To make sure that the service is used safely, I developed an Admin panel where we manually approve or deny messages before they get sent off. I have configured the system to immediately refund users who have sent inappropriate texts that we've had to deny.</p>
-        <p class="projectText">The process of developing SendItNow has been relatively straightforward because 90% of what I've had to do for this, I had already done for GreenShift. The main difficulty was handling the PayPal API.</p>
-
+        <p class="projectText">SendItNow is a project I recently undertook with a friend. It is a prank website where users can pay to send anonymous novelty prank messages to their friends. You can visit <a href="https://sendit-now.co.uk/">SendItNow</a> here. I have developed the backend and my friend developed the frontend. To make sure that the service is used safely, I developed an admin panel where we manually approve or deny messages before they get sent off. With user permission, I have also set up an email service that runs once per day to notify any user that their message was denied due to breaching TOS so they are aware what they are doing isn't acceptable.</p>
+        <p class="projectText">The process of developing SendItNow has been relatively straightforward because 90% of what I've had to do for this, I had already done for GreenShift. The main difficulty was handling the PayPal API due to its poor maintenance. We now use Stripe.</p>
+        
         <div class="panel">
             <h4>Technologies Used </h4>
             <ul class="tech-list">
@@ -38,6 +38,8 @@
                 <li>ASP.NET</li>
                 <li>Webhooks</li>
                 <li>Microsoft Azure</li>
+                <li>NGNIX</li>
+                <li>Linux VPS</li>
             </ul>
         </div>
     </div>
@@ -53,9 +55,8 @@
         </div>
         <br />
 
-        <p class="projectText">BullBot is a tool that utlizes webhooks to provide the user with information about stocks and shares they have liked. The tool has a web panel powered by ASP.NET where they can control their preferences.</p>
-        <p class="projectText">The main idea for BullBot was to take my experience with ASP.NET and apply in a project where alhtough ASP.NET powers the whole application, its not something that the user relies on, the main UI is within a discord chat.</p>
-        <p class="projectText">I noticed the hardest part about this project was finding API's that gave me enough data for free that I could then use to manipulate/extrapolate extra data from.</p>
+        <p class="projectText">BullBot is a tool that utlizes webhooks to provide the user with information about stocks and shares they have liked. The tool has a web panel powered by ASP.NET where they can control their preferences. The main idea for BullBot was to take my experience with ASP.NET and apply in a project where alhtough ASP.NET powers the whole application, its not something that the user relies on, the main UI is within a discord chat</p>
+        <p class="projectText">The main difficulty with this project is that BullBot gets a lot of its information from finance orientated organizations and their API's are obviously going to be quite limited in what they offer for free, I had to extrapolate a lot of extra data with maths and research to be able to offer BullBot users useful data without having to pay extortionate prices with organizations like FinHub'</p>
 
         <div class="panel">
             <h4>Technologies Used </h4>

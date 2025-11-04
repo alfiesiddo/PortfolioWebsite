@@ -30,16 +30,25 @@ html {
 }
 
 .same-height-img {
-    align-self: center;
-    min-height: 70%;
-    height: 100%;
-    width: fit-content;
+    display: block; /* avoid inline spacing issues */
+    max-width: 100%;
+    width: auto;
+    height: auto; /* important: don't force 100% height */
+    max-height: 440px; /* adjust this to taste (controls tallest images) */
     object-fit: contain;
+    margin: 0 auto;
 }
+
+
 
 .same-height-img-containter {
     padding-bottom: 2%;
     max-height: 100%;
+}
+
+.same-height-img-containter-portrait {
+    padding-bottom: 2%;
+    max-height: 50%;
 }
 
 .panel {
