@@ -34,7 +34,7 @@ app.Use(async (context, next) =>
 
 app.Use(async (context, next) =>
 {
-    var allowedHosts = new[] { "asiddons.co.uk", "localhost" };
+    var allowedHosts = new[] { "asiddons.co.uk", "wwww.asiddons.co.uk", "localhost" };
     var requestHost = context.Request.Host.Host?.ToLowerInvariant();
 
     if (!allowedHosts.Contains(requestHost))
