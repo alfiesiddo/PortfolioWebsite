@@ -34,10 +34,12 @@ app.Use(async (context, next) =>
 
 app.Use(async (context, next) =>
 {
-    var allowedHosts = new[] { "asiddons.co.uk", "wwww.asiddons.co.uk", "localhost" };
     var requestHost = context.Request.Host.Host?.ToLowerInvariant();
 
-    if (!allowedHosts.Contains(requestHost))
+    if (string.IsNullOrEmpty(requestHost) ||
+        !(requestHost == "asiddons.co.uk" ||
+          requestHost == "www.asiddons.co.uk" ||
+          requestHost == "localhost"))
     {
         context.Response.StatusCode = 403;
         await context.Response.WriteAsync("Forbidden");
