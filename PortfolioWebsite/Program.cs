@@ -32,6 +32,21 @@ app.Use(async (context, next) =>
     await next();
 });
 
+app.Use(async (context, next) =>
+{
+    var allowedHosts = new[] { "asiddons.co.uk", "localhost" };
+    var requestHost = context.Request.Host.Host?.ToLowerInvariant();
+
+    if (!allowedHosts.Contains(requestHost))
+    {
+        context.Response.StatusCode = 403;
+        await context.Response.WriteAsync("Forbidden");
+        return;
+    }
+
+    await next();
+});
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
